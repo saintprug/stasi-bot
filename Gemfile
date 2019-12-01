@@ -18,8 +18,10 @@ gem 'dry-container'
 group :development, :test do
   gem 'pry'
   gem 'pry-byebug'
+  gem 'dotenv'
 end
 
 group :test do
   gem 'rspec'
+  gem 'webmock'
 end

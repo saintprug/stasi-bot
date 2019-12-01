@@ -17,8 +17,6 @@ module Services
         end
       end
 
-      private
-
       def fetch_updates(offset: nil)
         response = client.get(
           path: 'getUpdates',
