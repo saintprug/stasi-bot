@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require_relative '../config/application'
+
+module StasiBot
+  module CLI
+    module Commands
+      extend Hanami::CLI::Registry
+
+      class Listener < Hanami::CLI::Command
+        desc 'Start listening new messages'
+
+        def call(*)
+          Container['services.telegram.listener'].start
+        end
+      end
+
+      register 'start', Listener
+    end
+  end
+end
+
+Hanami::CLI.new(StasiBot::CLI::Commands).call
