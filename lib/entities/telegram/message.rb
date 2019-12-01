@@ -1,8 +1,6 @@
 module Entities
   module Telegram
     class Message < Entity
-      transform_keys(&:to_sym)
-
       attribute :message_id, Types::Strict::Integer
       attribute :from, From
       attribute :chat, Chat

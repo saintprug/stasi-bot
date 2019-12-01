@@ -13,7 +13,6 @@ module Services
 
           if updates.count > 0
             offset = updates.last.update_id.next
-            puts updates
           end
         end
       end
